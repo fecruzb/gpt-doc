@@ -3,16 +3,17 @@ from langchain.chat_models import ChatOpenAI
 import gradio as gr
 import os
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = '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' # put your key
+folder = "docs" # put your files
 
-def construct_index(directory_path):
+def build_index():
 
     # define LLM
-    llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-4"))
+    llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="text-davinci-003"))
     service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 
     # build index
-    documents = SimpleDirectoryReader(directory_path).load_data()
+    documents = SimpleDirectoryReader(folder).load_data()
     index = GPTSimpleVectorIndex.from_documents(documents, service_context=service_context)
 
     # save index
@@ -27,14 +28,16 @@ def chatbot(input_text):
 
     ## input query
     response = index.query(input_text)
+
     return response.response
 
 
 # Construct index
-index = construct_index("docs")
+index = build_index()
 
-## Create web interface
+# Create web interface
 inputs = gr.components.Textbox(lines=10, label="Enter your text")
 iface = gr.Interface(fn=chatbot, inputs=inputs, outputs="text", title="Custom-trained AI Chatbot")
 
+# Run at http://127.0.0.1:7860
 iface.launch(share=True)

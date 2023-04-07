@@ -29,6 +29,23 @@ source env/bin/activate
 pip install -r requirements.txt
 ``` 
 
+## Put any files inside docs/ they have these parsers
+
+```
+".pdf": PDFParser(),
+".docx": DocxParser(),
+".pptx": PptxParser(),
+".jpg": ImageParser(),
+".png": ImageParser(),
+".jpeg": ImageParser(),
+".mp3": VideoAudioParser(),
+".mp4": VideoAudioParser(),
+".csv": PandasCSVParser(),
+".epub": EpubParser(),
+".md": MarkdownParser(),
+".mbox": MboxParser(),
+```
+
 ## Start
 
 ```
