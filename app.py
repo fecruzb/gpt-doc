@@ -3,8 +3,8 @@ from langchain.chat_models import ChatOpenAI
 import gradio as gr
 import os
 
-os.environ["OPENAI_API_KEY"] = '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' # put your key
-folder = "docs" # put your files
+os.environ["OPENAI_API_KEY"] = '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'
+folder = "docs"
 
 def build_index():
 
@@ -23,7 +23,7 @@ def build_index():
 
 
 def chatbot(input_text):
-    # load index
+    # load indexgit p
     index = GPTSimpleVectorIndex.load_from_disk('index.json')
 
     ## input query

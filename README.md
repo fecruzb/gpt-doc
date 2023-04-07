@@ -10,7 +10,7 @@
 ## 3. Create env
 
 ```bash
-`python3 -m venv env
+python3 -m venv env
 ````
 
 ## Activate env
@@ -29,8 +29,9 @@ source env/bin/activate
 pip install -r requirements.txt
 ``` 
 
-## Put any files inside docs/ they have these parsers
+## Put any file inside docs/ folder
 
+Supported loaders
 ```
 ".pdf": PDFParser(),
 ".docx": DocxParser(),
@@ -45,6 +46,7 @@ pip install -r requirements.txt
 ".md": MarkdownParser(),
 ".mbox": MboxParser(),
 ```
+
 
 ## Start
 
