@@ -3,7 +3,7 @@ from langchain.chat_models import ChatOpenAI
 import gradio as gr
 import os
 
-os.environ["OPENAI_API_KEY"] = 'PUT YOUR KEY'
+os.environ["OPENAI_API_KEY"] = 'YOUR KEY'
 folder = "docs"
 
 def build_index():

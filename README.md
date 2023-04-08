@@ -31,7 +31,9 @@ pip install -r requirements.txt
 
 ## Put any file inside docs/ folder
 
-Supported loaders
+Sample: [docs/ww2.pdf](docs/ww2.pdf.png)
+
+Supported file loaders
 ```
 ".pdf": PDFParser(),
 ".docx": DocxParser(),
