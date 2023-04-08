@@ -1,13 +1,13 @@
-## 1. Dependencies
+## Dependencies
 
 - Install **Python 3**
 - Install **Pip**
 
 
-## 2. Install env
+## Install env
 - pip install virtualenv
 
-## 3. Create env
+## Create env
 
 ```bash
 python3 -m venv env
@@ -53,3 +53,7 @@ Supported loaders
 ```
 python3 app.py
 ```
+
+Navigate to: http://127.0.0.1:7860
+
+![Screenshot](sample.png)
