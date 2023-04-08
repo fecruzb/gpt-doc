@@ -68,7 +68,7 @@ def start(filename):
 
 
 # Train
-# index = build_url_index("https://gpt-index.readthedocs.io/en/latest/index.html", 'index.gptindex.json')
+index = build_url_index("https://gpt-index.readthedocs.io/en/latest/index.html", 'index.gpt-index.json')
 
 # Run
-start('index.gptindex.json')
+start('index.gpt-index.json')
