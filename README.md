@@ -11,7 +11,17 @@
 
 ```bash
 python3 -m venv env
-````
+```
+
+## Create a .env file
+
+``` 
+touch .env`
+```
+ 
+```
+OPENAI_API_KEY=YOUR KEY
+```
 
 ## Activate env
 

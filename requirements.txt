@@ -3,3 +3,6 @@ llama-index
 PyPDF2
 PyCryptodome
 gradio
+whisper
+bs4
+python-dotenv

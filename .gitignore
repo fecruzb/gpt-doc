@@ -1,3 +1,5 @@
 flagged
 env
 index.json
+__pycache__
+*.json
